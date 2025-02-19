@@ -12,6 +12,8 @@ import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
+import jakarta.ws.rs.ext.Provider;
+
 import java.util.Map;
 import java.util.NoSuchElementException;
 import org.eclipse.microprofile.faulttolerance.exceptions.TimeoutException;
@@ -23,6 +25,7 @@ import org.jboss.logging.Logger;
  * <p>use of default constructor with no arguments
  */
 @RegisterForReflection
+@Provider
 @ApplicationScoped
 public class ThrowableMapper implements ExceptionMapper<Throwable> {
 

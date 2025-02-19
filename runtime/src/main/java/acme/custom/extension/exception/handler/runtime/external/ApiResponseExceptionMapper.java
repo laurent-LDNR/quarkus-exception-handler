@@ -11,6 +11,8 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
+import jakarta.ws.rs.ext.Provider;
+
 import java.util.List;
 import org.eclipse.microprofile.rest.client.ext.ResponseExceptionMapper;
 import org.jboss.logging.Logger;
@@ -21,6 +23,7 @@ import org.jboss.logging.Logger;
  * <p>use of default constructor with no arguments
  */
 @RegisterForReflection
+@Provider
 @ApplicationScoped
 public class ApiResponseExceptionMapper
     implements ResponseExceptionMapper<ApiStatusResponseException> {

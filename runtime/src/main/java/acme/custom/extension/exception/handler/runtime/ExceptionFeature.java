@@ -4,7 +4,9 @@ import acme.custom.extension.exception.handler.runtime.external.ApiResponseExcep
 import acme.custom.extension.exception.handler.runtime.internal.ThrowableMapper;
 import jakarta.ws.rs.core.Feature;
 import jakarta.ws.rs.core.FeatureContext;
+import jakarta.ws.rs.ext.Provider;
 
+@Provider
 public class ExceptionFeature implements Feature {
 
   @Override

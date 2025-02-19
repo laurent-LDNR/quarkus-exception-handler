@@ -11,6 +11,5 @@ public class ExceptionHandlerRecorder {
   public void recordExceptionMappers() {
     CDI.current().select(ThrowableMapper.class).get();
     CDI.current().select(ApiResponseExceptionMapper.class).get();
-    System.out.println("ExceptionHandlerRecorder: Exception mappers enregistrés !");
   }
 }
